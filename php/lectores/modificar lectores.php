@@ -119,7 +119,7 @@
 						<br>
 						<label for="codigo_postal">Código postal:</label>
 						<br>
-						<input type="number" min="1" placeholder="Ingrese su código postal" id="codigo_postal" name="codigo_postal" pattern="^[0-9]{5}$" title="El código postal debe tener 5 dígitos." value="<?php echo $codigo_postal; ?>" required/>
+						<input type="text" placeholder="Ingrese su código postal" id="codigo_postal" name="codigo_postal" pattern="^[0-9]{5}$" title="El código postal debe tener 5 dígitos." value="<?php echo $codigo_postal; ?>" required/>
 						<br>
 						<label for="municipio">Municipio:</label>
 						<br>

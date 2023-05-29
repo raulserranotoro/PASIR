@@ -111,7 +111,7 @@
 							<br>
 							<label for="telefono">Teléfono:</label>
 							<br>
-							<input type="number" min="1" placeholder="Ingrese su teléfono" id="telefono" name="telefono" pattern="^[0-9]{9}$" title="El teléfono debe tener 9 dígitos." value="<?php echo $telefono; ?>" required/>
+							<input type="text" placeholder="Ingrese su teléfono" id="telefono" name="telefono" pattern="^[0-9]{9}$" title="El teléfono debe tener 9 dígitos." value="<?php echo $telefono; ?>" required/>
 							<br>
 							<label for="direccion">Dirección:</label>
 							<br>
@@ -119,7 +119,7 @@
 							<br>
 							<label for="codigo_postal">Código postal:</label>
 							<br>
-							<input type="number" min="1" placeholder="Ingrese su código postal" id="codigo_postal" name="codigo_postal" pattern="^[0-9]{5}$" title="El código postal debe tener 5 dígitos." value="<?php echo $codigo_postal; ?>" required/>
+							<input type="text" placeholder="Ingrese su código postal" id="codigo_postal" name="codigo_postal" pattern="^[0-9]{5}$" title="El código postal debe tener 5 dígitos." value="<?php echo $codigo_postal; ?>" required/>
 							<br>
 							<label for="municipio">Municipio:</label>
 							<br>
@@ -286,18 +286,9 @@
 										}
 										//Se llama al archivo "cerrar sesion.php" para que cierre la sesión del usuario eliminado.
 										include ("../cerrar sesion.php");
+									//Si el número de filas no es igual a 0, muestra una alerta por pantalla y te redirecciona a "datos lectores.php".
 									}else{
-										//La variable "$delete" guarda la sentencia realizada.
-										$delete="DELETE lectores, alquileres FROM lectores RIGHT JOIN alquileres ON lectores.dni_lector=alquileres.dni_lector WHERE alquileres.dni_lector='".$dni_lector."'";			
-										//Si se conecta a la base de datos y se borra correctamente la cuenta, muestra una alerta por pantalla y te redirecciona a "index.php".
-										if (mysqli_query ($connection, $delete)){
-											echo "<script>alert ('Se ha eliminado correctamente la cuenta.'); window.location='../../index.php'</script>";
-										//Si la ejecución de sentencias ha fallado, muestra una alerta por pantalla y te redirecciona a "borrar lectores.php".
-										}else{
-											echo "<script>alert ('Ha fallado la instrucción.'); window.location='borrar lectores.php'</script>";
-										}
-										//Se llama al archivo "cerrar sesion.php" para que cierre la sesión del usuario eliminado.
-										include ("../cerrar sesion.php");
+										echo "<script>alert ('No se puede eliminar la cuenta debido a que el usuario tiene alquileres de libros.'); window.location='datos lectores.php'</script>";
 									}
 								//Si el número de filas no es igual a 1 o la contraseña enciptada no es igual, muestra una alerta por pantalla y te redirecciona a "datos lectores.php".
 								}else{

@@ -57,7 +57,7 @@
 						<br>
 						<label for="telefono">Teléfono:</label>
 						<br>
-						<input type="number" min="1" placeholder="Ingrese su teléfono" id="telefono" name="telefono" pattern="^[0-9]{9}$" title="El teléfono debe tener 9 dígitos." required/>
+						<input type="text" placeholder="Ingrese su teléfono" id="telefono" name="telefono" pattern="^[0-9]{9}$" title="El teléfono debe tener 9 dígitos." required/>
 						<br>
 						<label for="direccion">Dirección:</label>
 						<br>
@@ -65,7 +65,7 @@
 						<br>
 						<label for="codigo_postal">Código postal:</label>
 						<br>
-						<input type="number" min="1" placeholder="Ingrese su código postal" id="codigo_postal" name="codigo_postal" pattern="^[0-9]{5}$" title="El código postal debe tener 5 dígitos." required/>
+						<input type="text" placeholder="Ingrese su código postal" id="codigo_postal" name="codigo_postal" pattern="^[0-9]{5}$" title="El código postal debe tener 5 dígitos." required/>
 						<br>
 						<label for="municipio">Municipio:</label>
 						<br>
