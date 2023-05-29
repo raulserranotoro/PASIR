@@ -101,16 +101,9 @@
 									}else{
 										echo "<script>alert ('Ha fallado la instrucción.'); window.location='borrar libros.php'</script>";
 									}
+								//Si el número de filas no es igual a 0, muestra una alerta por pantalla y te redirecciona a "borrar libros.php".
 								}else{
-									//La variable "$delete" guarda la sentencia realizada.
-									$delete="DELETE libros, alquileres FROM libros RIGHT JOIN alquileres ON libros.isbn=alquileres.isbn WHERE libros.isbn='".$isbn."'";
-									//Si se conecta a la base de datos y se insertan correctamente los datos, muestra una alerta por pantalla y te redirecciona a "libros.php".
-									if (mysqli_query ($connection, $delete)){
-										echo "<script>alert ('Se ha borrado correctamente el libro con ISBN ".$isbn.".'); window.location='libros.php'</script>";
-									//Si la ejecución de sentencias ha fallado, muestra una alerta por pantalla y te redirecciona a "borrar libros.php".
-									}else{
-										echo "<script>alert ('Ha fallado la instrucción.'); window.location='borrar libros.php'</script>";
-									}
+									echo "<script>alert ('No se puede borrar el libro debido a que tiene alquileres.'); window.location='borrar libros.php'</script>";
 								}
 							//Si la ejecución de sentencias ha fallado, muestra una alerta por pantalla y te redirecciona a "borrar libros.php".
 							}else{
