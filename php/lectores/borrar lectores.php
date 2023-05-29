@@ -101,16 +101,9 @@
 									}else{
 										echo "<script>alert ('Ha fallado la instrucción.'); window.location='borrar lectores.php'</script>";
 									}
+								//Si el número de filas no es igual a 0, muestra una alerta por pantalla y te redirecciona a "borrar lectores lectores.php".
 								}else{
-									//La variable "$delete" guarda la sentencia realizada.
-									$delete="DELETE lectores, alquileres FROM lectores RIGHT JOIN alquileres ON lectores.dni_lector=alquileres.dni_lector WHERE alquileres.dni_lector='".$dni_lector."'";			
-									//Si se conecta a la base de datos y se borran correctamente los datos, muestra una alerta por pantalla y te redirecciona a "lectores.php".
-									if (mysqli_query ($connection, $delete)){
-										echo "<script>alert ('Se ha borrado correctamente al lector con DNI ".$dni_lector.".'); window.location='lectores.php'</script>";
-									//Si la ejecución de sentencias ha fallado, muestra una alerta por pantalla y te redirecciona a "borrar lectores.php".
-									}else{
-										echo "<script>alert ('Ha fallado la instrucción.'); window.location='borrar lectores.php'</script>";
-									}
+									echo "<script>alert ('No se puede borrar al lector debido a que tiene alquileres de libros.'); window.location='borrar lectores.php'</script>";
 								}
 							//Si la ejecución de sentencias ha fallado, muestra una alerta por pantalla y te redirecciona a "borrar lectores.php".
 							}else{
