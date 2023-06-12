@@ -61,7 +61,7 @@
 					</form>
 					<script type="text/javascript">
 						function confirmacion (){
-							var respuesta=confirm ("Se borrarán todos sus alquileres que están asociados a su DNI. ¿Estás seguro de que deseas eliminar al lector?");
+							var respuesta=confirm ("¿Estás seguro de que deseas eliminar al lector?");
 							if (respuesta==true){
 								return true;
 							}else{
