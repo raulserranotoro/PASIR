@@ -61,7 +61,7 @@
 					</form>
 					<script type="text/javascript">
 						function confirmacion (){
-							var respuesta=confirm ("Se borrarán también los alquileres que están asociados a su ISBN. ¿Estás seguro de que deseas eliminar el libro?");
+							var respuesta=confirm ("¿Estás seguro de que deseas eliminar el libro?");
 							if (respuesta==true){
 								return true;
 							}else{
