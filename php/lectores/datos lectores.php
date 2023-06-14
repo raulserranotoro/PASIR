@@ -39,7 +39,7 @@
 					</nav>
 				</header>
 				<main>
-                    <h2>Datos del lector</h2>
+					<h2>Datos del lector</h2>
 					<?php
 						//Si se han introducido todos los datos, se conecta a la base de datos.
 						$connection=new mysqli ("localhost", "administrador", "Ab123456", "biblioteca");
