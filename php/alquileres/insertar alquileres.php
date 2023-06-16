@@ -92,7 +92,7 @@
 							//Comprueba si el número de filas es igual a 1.
 							if ($nr==1){
 								//La variable "$insert" guarda la sentencia realizada.
-								$insert="INSERT INTO alquileres (dni_lector, isbn, fecha_salida, fecha_entrada) VALUES ('".$dni_lector."', '".$isbn."', '".$fecha_entrada."', '".$fecha_salida."')";
+								$insert="INSERT INTO alquileres (dni_lector, isbn, fecha_salida, fecha_entrada) VALUES ('".$dni_lector."', '".$isbn."', '".$fecha_salida."', '".$fecha_entrada."')";
 								//Si se conecta a la base de datos y se insertan correctamente los datos, muestra una alerta por pantalla y te redirecciona a "alquileres.php".
 								if (mysqli_query ($connection, $insert)){
 									echo "<script>alert ('Se ha insertado correctamente el alquiler.'); window.location='alquileres.php'</script>";
