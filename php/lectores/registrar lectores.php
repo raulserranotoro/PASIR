@@ -77,7 +77,7 @@
 						<br>
 						<label for="email">Email:</label>
 						<br>
-						<input type="email" placeholder="Ingrese su email" id="email" name="email" pattern="^[a-z0-9._%+-]+@[a-z0-9-]+.+.[a-z]{2,4}$" title="El correo electrónico no cumple con los requisitos." required/>
+						<input type="email" placeholder="Ingrese su email" id="email" name="email" pattern="^[a-z0-9._%+-]+@[a-z0-9-]+.+.[a-z]{2,4}$" title="El correo electrónico no cumple con los requisitos."/>
 						<br>
 						<label for="fecha_nacimiento">Fecha de nacimiento:</label>
 						<br>
